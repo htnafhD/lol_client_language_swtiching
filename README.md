@@ -20,6 +20,6 @@ options:
 `python LOL_Client_Language.py -l ja_JP`
 ![image](https://raw.githubusercontent.com/htnafhD/lol_client_language_swtiching/main/normal_run.png)
 
-# Example normal with suggest
+# Example run with suggestion
 `python LOL_Client_Language.py -l ja`
 ![image](https://raw.githubusercontent.com/htnafhD/lol_client_language_swtiching/main/RM.png)
