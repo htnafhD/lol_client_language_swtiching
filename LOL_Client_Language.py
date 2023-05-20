@@ -64,7 +64,11 @@ def get_the_correct_locale(locale):
         return locale
     else:
         similar_locale = list(filter(lambda x: locale in x, correct_locale))
-        user_select = input(f'[*] You mean {similar_locale[0]}? (Y/N)? ').lower()
+        try:
+            user_select = input(f'[*] You mean {similar_locale[0]}? (Y/N)? ').lower()
+        except:
+            user_select = None
+            print('[*] Please -h to view correct locale!')
         if user_select in ['yes', 'y']:
             print('[*] Creating shortcut')
             return similar_locale[0]
