@@ -105,7 +105,7 @@ def shortcut(locale):
                     lan = get_lan(f_locale)
                 except:
                     lan = f_locale
-                print(f'[*] Finished created shorcut for language {lan} at {shortcut_path}')
+                print(f'[*] Finished creating shorcut for language {lan} at {shortcut_path}')
                 open_shortcut(shortcut_path)
             except Exception as e:
                 print(f"[*] Unknow Error {e}")
