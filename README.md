@@ -1,5 +1,5 @@
 # Language Switching for League of Legends Client.
-Switch to supported language for LOL Client. Not only language but sound as well :D
+Switch to supported language for LOL Client. Not only language but sound as well :D (Cuz it come with package :|)
 # Usage
 `python LOL_Client_Language.py -l [LOCALE]`
 # Help
