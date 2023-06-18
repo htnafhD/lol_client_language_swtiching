@@ -69,7 +69,8 @@ def get_the_correct_locale(locale):
         except:
             user_select = None
             print('[*] Please -h to view correct locale!')
-        if user_select in ['yes', 'y']:
+        if user_select in ['yes', 'y', '']:
+            del_existed_ink()
             print('[*] Creating shortcut')
             return similar_locale[0]
         elif user_select in ['no', 'n']:
@@ -86,6 +87,16 @@ def create_shortcut(target, shortcut_name, shortcut_path, arguments):
     shortcut.Arguments = arguments
     shortcut.Description = shortcut_name
     shortcut.Save()
+
+def del_existed_ink():
+    try:
+        desktop_path = f"{os.environ['USERPROFILE']}\\Desktop\\"
+        old_league = list(filter(lambda x: "League of Legends.lnk" in x, os.listdir(desktop_path)))
+        old_league_dir = f"{desktop_path}\\{old_league[0]}"
+        os.remove(old_league_dir)
+        print('[*] Removed old league file!')
+    except Exception as e:
+        print(f'[*] Can\'t delete file. Exception {e}')
 
 def shortcut(locale):
     f_locale = get_the_correct_locale(locale)
